@@ -327,7 +327,7 @@ const Tile: React.FC<TileProps> = ({
         setInitRq(true);
         console.log("value", text);
         const response = await axios.get(
-          `${backendApiUrl}/customer/rfq?symbol=${symbol1}-${symbol2}&currency=${symbol1}&orderQty=${text}`,
+          `${backendApiUrl}/api/customers/rfq?symbol=${symbol1}-${symbol2}&currency=${symbol1}&orderQty=${text}`,
           {
             cancelToken: source.token,
             headers: {

@@ -60,7 +60,7 @@ export default function SpotRFQPage() {
                 setPlacingOrder(true);
                 
                 const response = await axios.post(
-                    `${backendApiUrl}/customer/placeorder`,
+                    `${backendApiUrl}/api/customers/placeorder`,
                     payload,
                     {
                         cancelToken: source.token,
@@ -232,7 +232,7 @@ export default function SpotRFQPage() {
 
     const getHistoryData = async() => {
       try{
-        const res = await axios.get(`${backendApiUrl}/customer/orderhistory?accountNumber=${accountNumber}`,{
+        const res = await axios.get(`${backendApiUrl}/api/customers/order-history?accountNumber=${accountNumber}`,{
             headers: {
                 'Authorization': `Bearer ${backendApiToken}`            }
         });

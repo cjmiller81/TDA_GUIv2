@@ -85,7 +85,7 @@ function EditToolbar(props: EditToolbarProps) {
           const source = axios?.CancelToken?.source();
           try{
               console.log("call")
-              const res = await axios.get(`${backendApiUrl}/customer/list`,
+              const res = await axios.get(`${backendApiUrl}/api/customers`,
                   {
                       headers: {
                           Authorization: `Bearer ${backendApiToken}`,
